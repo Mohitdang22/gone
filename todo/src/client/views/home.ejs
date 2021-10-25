@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale:1.0">
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    </head>
+    
+    <body class="container">
+ 
+
+        <table>
+          <tr>
+            <td>
+            <h2>Home Page</h2>
+          </td>
+
+          <td>
+            <h2></h2>
+          </td>
+
+          <td>
+              <button onclick = "location.href='/logout'">Logout
+          </td>
+
+        </tr>
+      </table>
+
+        <table>
+       
+        <tr class ='element'>
+            <td>
+            <div class="edit" ><!--for edit-->
+                <form action="/edit" method="POST">
+                    <input type="hidden" name="itemId" value="">
+                    <input type="text" name="editeditem" value = "" id = "tasks" placeholder="Enter edited task">
+                    <button type="submit">edit</button> 
+                </form>
+            </div>
+            </td>
+
+                 
+          <td>
+            <div class = "delete">
+                
+                <form action="/delete" method="post">
+                    <input type="text" name="elementid" value="" style="display: none">
+                    <button>delete</button>
+                </form>
+                
+            </div> 
+            </td>
+
+        </tr>
+  
+    </table>
+
+
+        <table>
+            <form method="post" action="/add">
+                <tr>
+                        <td><label for="item"><h2>Items</h2></label></td>
+                        <td>
+                            <input type="text" name="item" id="item" placeholder="Item" autofocus >
+                        </td>
+                        
+                        <td>
+                          <button class="btn btn-lg btn-primary btn-block" type="submit">
+                          Add
+                          </button>
+                      </td>
+                </tr>
+           
+          
+    
+            </form>
+       
+        </table>
+
+        
+    </body>
+</html>
